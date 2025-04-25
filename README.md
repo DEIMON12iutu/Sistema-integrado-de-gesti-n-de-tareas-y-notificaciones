@@ -110,10 +110,24 @@ blueprint.json: Definición del flujo de trabajo en formato JSON. README.md: Est
    - Descarga `blueprint.json`
    - En Make.com: *Create Scenario* → *Import* → Sube el archivo
 
-2. **Pruebas**:
-   ```plaintext
-   1. Envía un correo de prueba a la cuenta monitoreada
-   2. Verifica:
+## Pruebas
+
+1. **Crear entrada de prueba**:
+   - Agrega manualmente una nueva fila en Google Sheets con datos de prueba:
+     ```plaintext
+     [Fecha] | [Nombre] | [Tipo] | [Prioridad] | [Detalles]
+     ```
+
+2. **Verificar automatización**:
+   - Confirma que el sistema:
+     Creó la tarjeta correspondiente en Trello/Asana  
+     Mapeó correctamente todos los campos  
+     Registró el ID de tarjeta en Sheets  
+     Envió notificaciones (si aplica)  
+
+3. **Prueba de actualización**:
+   - Modifica el estado en Trello/Asana  
+   - Verifica que Sheets actualizó el estado  
       
 ##  Autores
 **David Sosa**  Y
